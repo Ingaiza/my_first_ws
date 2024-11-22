@@ -25,8 +25,12 @@ endif()
 add_executable(number_publisher src/my_first_node.cpp)
 ament_target_dependencies(number_publisher rclcpp example_interfaces)
 
+add_executable(number_subscriber src/my_cpp_sub.cpp)
+ament_target_dependencies(number_subscriber rclcpp example_interfaces)
+
 install(TARGETS
         number_publisher
+        number_subscriber
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

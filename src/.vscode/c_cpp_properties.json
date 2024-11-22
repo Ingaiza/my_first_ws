@@ -11,6 +11,7 @@
                 "include/**",
                 "/usr/include/**",
                 "/opt/ros/humble/include/rclcpp",
+                "/opt/ros/humble/include/rclpy",
                 "/opt/ros/humble/include/rcl"
             ],
             "name": "ROS",

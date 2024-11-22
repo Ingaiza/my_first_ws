@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            "py_subscriber = my_py_pkg.my_py_sub:main",
         ],
     },
 )

@@ -8,6 +8,7 @@
             "includePath": [
                 "/opt/ros/humble/include/**",
                 "/home/ingaiza/my_first_ws/src/my_cpp_pkg/include/**",
+                "/home/ingaiza/my_first_ws/install/my_first_interfaces/include/my_first_interfaces/**",
                 "include/**",
                 "/usr/include/**",
                 "/opt/ros/humble/include/rclcpp",

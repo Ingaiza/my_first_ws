@@ -9,6 +9,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(example_interfaces REQUIRED)
+find_package(my_first_interfaces REQUIRED)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -28,9 +29,17 @@ ament_target_dependencies(number_publisher rclcpp example_interfaces)
 add_executable(number_subscriber src/my_cpp_sub.cpp)
 ament_target_dependencies(number_subscriber rclcpp example_interfaces)
 
+add_executable(add_server src/my_cpp_server.cpp)
+ament_target_dependencies(add_server rclcpp example_interfaces)
+
+add_executable(add_client src/my_cpp_client.cpp)
+ament_target_dependencies(add_client rclcpp example_interfaces)
+
 install(TARGETS
         number_publisher
         number_subscriber
+        add_server
+        add_client
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()

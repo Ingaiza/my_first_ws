@@ -8,7 +8,7 @@ from example_interfaces.msg import  Int64
 class NumberSub(Node): 
     def __init__(self):
         super().__init__("numberpy_sub") 
-        self.subscriber = self.create_subscription(Int64, "Number",self.sub_callback,1u)
+        self.subscriber = self.create_subscription(Int64, "Number",self.sub_callback,1)
 
     def sub_callback(self,msg):
         self.get_logger().warn(str(msg.data))

@@ -23,11 +23,12 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+# executables
 add_executable(number_publisher src/my_first_node.cpp)
-ament_target_dependencies(number_publisher rclcpp example_interfaces)
+ament_target_dependencies(number_publisher rclcpp example_interfaces my_first_interfaces)
 
 add_executable(number_subscriber src/my_cpp_sub.cpp)
-ament_target_dependencies(number_subscriber rclcpp example_interfaces)
+ament_target_dependencies(number_subscriber rclcpp example_interfaces my_first_interfaces)
 
 add_executable(add_server src/my_cpp_server.cpp)
 ament_target_dependencies(add_server rclcpp example_interfaces)
@@ -35,6 +36,7 @@ ament_target_dependencies(add_server rclcpp example_interfaces)
 add_executable(add_client src/my_cpp_client.cpp)
 ament_target_dependencies(add_client rclcpp example_interfaces)
 
+# installing executables
 install(TARGETS
         number_publisher
         number_subscriber
